@@ -13,7 +13,7 @@ A desktop app that downloads links from YouTube, Instagram, TikTok, X, Facebook,
 - **Multi-platform, parallel downloads:** paste links from different sites in one go. They are queued and downloaded 1–5 at a time (configurable).
 - **Thumbnails:** every download card shows the video's thumbnail (for YouTube links, even before the download starts).
 - Per-download progress, speed, ETA, cancel and "Show" buttons.
-- Formats: best quality, 1080p, 720p, 480p, 360p, MP3, M4A.
+- Formats: best quality, 16k, 8k, 4k, 2k, 1080p, 720p, 480p, 360p, MP3, M4A.
 - YouTube playlists: the whole list or a range (`1-5`, `1,3,7`).
 - Batch import from a `.txt` file.
 - Clean, minimal interface with dark/light theme.
@@ -66,7 +66,7 @@ YouTube, Instagram, TikTok, X, Facebook, Reddit, Vimeo, Twitch ve daha fazlasın
 - **Çoklu platform, paralel indirme:** farklı sitelerden linkleri tek seferde yapıştır. Linkler kuyruğa girer ve aynı anda 1–5 tanesi iner (ayarlanabilir).
 - **Küçük resim:** her indirme kartında videonun kapak görseli görünür (YouTube linklerinde indirme başlamadan bile).
 - Her indirme için canlı ilerleme, hız, kalan süre, iptal ve "Göster" düğmeleri.
-- Formatlar: en iyi kalite, 1080p, 720p, 480p, 360p, MP3, M4A.
+- Formatlar: en iyi kalite, 16k, 8k, 4k, 2k, 1080p, 720p, 480p, 360p, MP3, M4A.
 - YouTube oynatma listeleri: tüm liste ya da aralık (`1-5`, `1,3,7`).
 - `.txt` dosyasından toplu link yükleme.
 - Sade ve profesyonel arayüz, koyu/açık tema.
