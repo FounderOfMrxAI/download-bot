@@ -1,0 +1,42 @@
+name: Build EXE
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  windows-exe:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt pyinstaller
+      - name: Get ffmpeg
+        shell: powershell
+        run: ./tools/get_ffmpeg.ps1
+      - name: Build
+        shell: cmd
+        run: >
+          python -m PyInstaller --noconfirm --clean --onefile --noconsole
+          --name DownloadBot --icon icon.ico
+          --collect-all customtkinter --collect-all yt_dlp
+          --add-binary "ffmpeg\ffmpeg.exe;." --add-data "icon.ico;."
+          indirme_botu.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: DownloadBot-windows
+          path: dist/DownloadBot.exe
+      - name: Attach to release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/DownloadBot.exe
